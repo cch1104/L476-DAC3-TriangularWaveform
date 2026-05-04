@@ -99,6 +99,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint32_t Offset=1247;
+
+  HAL_TIM_Base_Start(&htim2);
+  HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
+  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, Offset);
   while (1)
   {
     /* USER CODE END WHILE */
